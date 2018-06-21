@@ -3,17 +3,14 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo Build started on `date`
-      - git status
-      - git branch
-      - git checkout $BRANCH
-      - git config user.name 'CodeBuild'
-      - git config user.email 'fake@fake.fake'
-      - [ $BRANCH != master] && git merge master
-      - python main.py
+      - "echo Build started on `date`"
+      - "git status"
+      - "git branch"
+      - "git checkout $BRANCH"
+      - "git config user.name 'CodeBuild'"
+      - "git config user.email 'fake@fake.fake'"
+      - "[ $BRANCH != master] && git merge master"
+      - "python main.py"
   post_build:
     commands:
-      - echo Build completed on `date`
-artifacts:
-  files:
-    - HelloWorld.py
+      - "echo Build completed on `date`"
