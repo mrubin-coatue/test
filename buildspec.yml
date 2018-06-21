@@ -9,10 +9,7 @@ phases:
       - git checkout $BRANCH
       - git config user.name 'CodeBuild'
       - git config user.email 'fake@fake.fake'
-      - git merge master
-      - ls -f
-      - ls .. -f
-      - ls ../.. -f
+      - [ $BRANCH != master] && git merge master
       - python main.py
   post_build:
     commands:
