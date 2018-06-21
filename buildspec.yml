@@ -5,7 +5,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Merge should happen here
-      - git status --oneline
+      - git status
+      - git log --oneline
       - python HelloWorld.py
   post_build:
     commands:
