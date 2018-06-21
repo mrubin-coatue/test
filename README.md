@@ -1,4 +1,3 @@
 # test
 
-readme2
-dagsgadsfgadfsg
+This is a readme file. Please read.
