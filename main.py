@@ -1,6 +1,7 @@
+import other_file
 
 def my_func():
-    print "Hello World"
+    other_file.good_func()
   
 if __name__ == '__main__':
     my_func()
