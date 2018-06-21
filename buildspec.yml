@@ -4,11 +4,15 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - git log --graph --oneline --all
       - git status
       - git branch
       - git checkout $BRANCH
+      - git config user.name 'CodeBuild'
+      - git config user.email 'fake@fake.fake'
       - git merge master
+      - ls -f
+      - ls .. -f
+      - ls ../.. -f
       - python main.py
   post_build:
     commands:
