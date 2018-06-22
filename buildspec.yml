@@ -7,10 +7,10 @@ phases:
       - "ls -f"
       - "git status"
       - "git branch"
-      - "git checkout $BRANCH"
+      - "git checkout $CHECKOUT_BRANCH"
       - "git config user.name 'CodeBuild'"
       - "git config user.email 'fake@fake.fake'"
-      - "if [ $BRANCH != master ]; then git merge master; fi"
+      - "git merge $MERGE_BRANCH"
       - "python main.py"
   post_build:
     commands:
