@@ -5,9 +5,9 @@ phases:
     commands:
       - "echo Build started on `date`"
       - "ls -f"
-      - "git status"
-      - "git branch"
-      - "git checkout $CHECKOUT_BRANCH"
+      - "echo MODIFIED_BRANCH: $MODIFIED_BRANCH"
+      - "echo MERGE_BRANCH: $MERGE_BRANCH"
+      - "git checkout $MODIFIED_BRANCH"
       - "git config user.name 'CodeBuild'"
       - "git config user.email 'fake@fake.fake'"
       - "git merge $MERGE_BRANCH"
