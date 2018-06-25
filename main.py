@@ -4,5 +4,6 @@ def my_func():
     other_file.good_func()
   
 if __name__ == '__main__':
+    #new comment
     my_func()
   
