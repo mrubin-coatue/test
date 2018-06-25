@@ -5,5 +5,5 @@ phases:
     commands:
       - "echo MERGE_BRANCH: $MERGE_BRANCH"
       - "git checkout master"
-      - "git -c user.name='CodeBuild' -c user.email='fake@email.org' merge $MERGE_BRANCH"
+      - "git -c user.name='' -c user.email='' merge $MERGE_BRANCH"
       - "python main.py"
