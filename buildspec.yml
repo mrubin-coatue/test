@@ -3,15 +3,9 @@ version: 0.2
 phases:
   build:
     commands:
-      - "echo Build started on `date`"
-      - "ls -f"
-      - "echo MODIFIED_BRANCH: $MODIFIED_BRANCH"
       - "echo MERGE_BRANCH: $MERGE_BRANCH"
-      - "git checkout $MODIFIED_BRANCH"
+      - "git checkout master"
       - "git config user.name 'CodeBuild'"
       - "git config user.email 'fake@fake.fake'"
       - "git merge $MERGE_BRANCH"
       - "python main.py"
-  post_build:
-    commands:
-      - "echo Build completed on `date`"
