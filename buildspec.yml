@@ -3,8 +3,5 @@ version: 0.2
 phases:
   build:
     commands:
-      - "git status"
-      - "git branch"
-      - "git checkout master"
-      - "git -c user.name='CodeBuild' -c user.email='fake@email' merge $BRANCH_NAME"
+      - "git checkout master; git -c user.name='CodeBuild' -c user.email='fake@email' merge $BRANCH_NAME"
       - "python main.py"
