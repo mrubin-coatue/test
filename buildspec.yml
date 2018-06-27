@@ -3,5 +3,5 @@ version: 0.2
 phases:
   build:
     commands:
-      - "git -c user.name='CodeBuild' -c user.email='fake@email' merge master"
-      - "python main.py"
+      - git -c user.name='CodeBuild' -c user.email='fake@email' merge master
+      - python main.py
