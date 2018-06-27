@@ -3,7 +3,5 @@ version: 0.2
 phases:
   build:
     commands:
-      - "echo MERGE_BRANCH: $MERGE_BRANCH"
-      - "git checkout master"
-      - "git -c user.name='CodeBuild' -c user.email='fake@email' merge $MERGE_BRANCH"
+      - "git -c user.name='CodeBuild' -c user.email='fake@email' merge master"
       - "python main.py"
