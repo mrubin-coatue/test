@@ -7,4 +7,4 @@ phases:
   
   post_build:
     commands:
-      - (($CODEBUILD_BUILD_SUCCEEDING)) && python3.6 ./scripts/codebuild/rebuild_pull_requests.py
+      - [[ $CODEBUILD_BUILD_SUCCEEDING == 1 ] && python3.6 ./scripts/codebuild/rebuild_pull_requests.py
