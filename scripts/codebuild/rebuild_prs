@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-payload='{"repo_url": "https://github.com/mrubin-coatue/test/", "codebuild_project_name": "dummy", "pull_request_age_limit": 15}'
+payload='{"repo_url": "https://github.com/mrubin-coatue/test/", "codebuild_project_name": "dummy", "pull_request_age_limit": 150}'
 aws lambda invoke --function-name testFunction --invocation-type Event --payload "$payload" lambda_output.txt
