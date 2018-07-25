@@ -5,6 +5,6 @@ phases:
     commands:
       - python main.py
   
-  build:
+  post_build:
     commands:
       - python3.6 ./scripts/codebuild/rebuild_pull_requests.py
