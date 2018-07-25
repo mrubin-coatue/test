@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-payload="{\"repo_url\": \"$CODEBUILD_SOURCE_REPO_URL\", \"codebuild_project_name\": \"dummy\", \"pull_request_age_limit\": 150}"
-aws lambda invoke --function-name testFunction --payload "$payload" lambda_output.txt
