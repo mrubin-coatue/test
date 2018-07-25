@@ -6,8 +6,11 @@ import requests
 
 client = boto3.client("codebuild")
 
+REPO_URL = "https://github.com/mrubin-coatue/test/"
+CODEBUILD_PROJECT_NAME = "datascience-int-another-demo"
+PULL_REQUEST_AGE_LIMIT = 15
 
-def build_pull_requests(repo_url, codebuild_project_name, pull_request_age_limit=15):
+def build_pull_requests(repo_url, codebuild_project_name, pull_request_age_limit):
     repo_name = re.match("https?://github.com/([^/]+/[^/]+)", repo_url).group(1)
     pull_requests = get_all_pull_requests(repo_name)
     pull_requests_to_build = [pr for pr in pull_requests if requires_building(pr, pull_request_age_limit)]
@@ -57,4 +60,4 @@ def rebuild_branch(branch_name, codebuild_project_name):
     client.start_build(**build_data)
 
 if __name__ == "__main__":
-    build_pull_requests(*sys.argv[0:2])
+    build_pull_requests(REPO_URL, CODEBUILD_PROJECT_NAME, PULL_REQUEST_AGE_LIMIT)
