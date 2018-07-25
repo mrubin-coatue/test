@@ -3,6 +3,7 @@ version: 0.2
 phases:
   build:
     commands:
+      - python --version
       - python main.py
   
   post_build:
