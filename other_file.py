@@ -1,5 +1,5 @@
 def good_func():
-    print "good func called correctly"
+    print("good func called correctly")
     return True
     
 def bad_func():
