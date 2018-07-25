@@ -3,5 +3,5 @@ version: 0.2
 phases:
   build:
     commands:
-      - ./scripts/codebuild/rebuild_prs
+      - python3.6 ./scripts/codebuild/rebuild_pull_requests.py
       - python main.py
