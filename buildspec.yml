@@ -4,5 +4,5 @@ phases:
   build:
     commands:
       - git -c user.name='CodeBuild' -c user.email='fake@email' merge master
-      - ./scripts/codebuild/rebuild_prs.sh
+      - ./scripts/codebuild/rebuild_prs
       - python main.py
